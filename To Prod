@@ -1,0 +1,1 @@
+javascript:(function() {window.location=window.location.toString().replace(/^http:\/\/[^.*]*\./,'http://m.').replace(/\/app_stag.php/,'').replace(/.local\/app_dev.php/,'.com');})()
