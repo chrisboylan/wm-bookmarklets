@@ -1,0 +1,19 @@
+console.clear();
+var href = [];
+var href2nd = [];
+href.push('http://stag-m.rollingstone.com/app_stag.php/music/tag/rs-dance');
+href.push('http://m.rollingstone.local/app_dev.php/music/tag/rs-dance');
+href.push('http://m.rollingstone.com/music/tag/rs-dance');
+href.push('http://origin-m.rollingstone.com/music/tag/rs-dance');
+
+var tester = function(test) {
+    return test.replace(/^http:\/\/[^.*]*\./,'http://origin-m.')
+    .replace(/\/app_stag.php/,'')
+    .replace(/.local\/app_dev.php/,'.com')    
+}
+
+for (url in href) {
+    console.log(tester(href[url]));
+    href2nd.push(tester(href[url]));
+    console.log(tester(href2nd[url]));
+                }
