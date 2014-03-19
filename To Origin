@@ -1,1 +1,1 @@
-javascript:(function() {window.location=window.location.toString().replace(/^http:\/\/[^.*]*\./,'http://origin-m.').replace(/\/app_stag.php/,'').replace(/.local\/app_dev.php/,'.com');})()
+javascript:(function() {window.location=window.location.toString().replace(/^http:\/\/[-\w]*?m/,'http://origin-m').replace(/^http:\/\/[-a-ln-zA-LN-Z0-9_]*?\.(?!local|com)/,'http://origin.').replace(/^http:\/\/(?!origin)/,'http://origin.').replace(/\/app_stag.php/,'').replace(/.local\/app_dev.php/,'.com');})()
